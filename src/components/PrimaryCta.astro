@@ -1,0 +1,81 @@
+---
+import { chronoGolfTeeTimesUrl, fairmontMailingListUrl } from "../data/site";
+
+const bookNowUrl = chronoGolfTeeTimesUrl;
+const mailingListUrl = fairmontMailingListUrl;
+---
+
+<section class="section-space">
+  <div class="container">
+    <div class="cta-shell">
+      <div>
+        <p class="eyebrow">Book Your Tee</p>
+        <h2 class="section-title">Your Round in Jasper Starts Here</h2>
+        <p class="lead">
+          Reserve your preferred tee time and experience one of Canada's most celebrated resort courses, where mountain drama meets timeless design.
+        </p>
+      </div>
+      <div class="actions">
+        <a
+          href={bookNowUrl}
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
+        <a
+          href={mailingListUrl}
+          class="button button-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join Mailing List
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-shell {
+    background: linear-gradient(120deg, #0f3a39 0%, #174f4d 55%, #1a5f5c 100%);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 3.5vw, 2.8rem);
+    color: #f7fbfa;
+    display: grid;
+    grid-template-columns: 1.9fr auto;
+    gap: 1rem 1.5rem;
+    align-items: center;
+    box-shadow: 0 25px 50px rgba(10, 32, 31, 0.25);
+  }
+
+  .cta-shell .lead {
+    color: rgba(247, 251, 250, 0.88);
+    margin-bottom: 0;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .button-outline {
+    border: 1px solid rgba(247, 251, 250, 0.44);
+    color: #f7fbfa;
+    background: rgba(247, 251, 250, 0.07);
+  }
+
+  @media (max-width: 900px) {
+    .cta-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .actions {
+      justify-content: flex-start;
+    }
+  }
+</style>

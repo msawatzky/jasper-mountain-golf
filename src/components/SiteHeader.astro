@@ -1,0 +1,315 @@
+---
+import { chronoGolfTeeTimesUrl } from "../data/site";
+
+/** Same logo asset as jaspermountaingolf.com header */
+const logoSrc =
+  "https://static.wixstatic.com/media/8a929a_a5eb703280f14c38884e20679f8374e2~mv2.png/v1/fill/w_200,h_203,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/JPL_Golf%20Centennial%20Logo_Black_RGB.png";
+const logoSrc2x =
+  "https://static.wixstatic.com/media/8a929a_a5eb703280f14c38884e20679f8374e2~mv2.png/v1/fill/w_280,h_284,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/JPL_Golf%20Centennial%20Logo_Black_RGB.png";
+
+const teeTimesUrl = chronoGolfTeeTimesUrl;
+
+const courseLinks = [
+  { href: "/the-course", label: "The Golf Course" },
+  { href: "/golf-clubhouse", label: "Clubhouse" },
+  { href: "/memberships", label: "Passholders" },
+  { href: "/lessons-jasper-golf", label: "Lessons" },
+  { href: "/groups-events", label: "Groups & Tournaments" },
+  { href: "/golf-regulations", label: "Golfer Guidelines" },
+  { href: "/history", label: "History" },
+  { href: "/contact-us", label: "FAQ & Contact" },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo-link" aria-label="Fairmont Jasper Park Lodge Golf Club — home">
+      <img
+        src={logoSrc}
+        srcset={`${logoSrc} 1x, ${logoSrc2x} 2x`}
+        width="140"
+        height="142"
+        alt="Fairmont Jasper Park Lodge Golf Club"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-scrim" aria-hidden="true"></label>
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/thebearsden">The Bear&apos;s Den</a>
+
+      <div class="nav-dropdown">
+        <a href="/the-course" class="nav-dropdown-trigger">The Course</a>
+        <ul class="nav-dropdown-panel">
+          {courseLinks.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <a href="/rates-tee-times">Rates &amp; Tee Times</a>
+      <a href="/vacation-packages">Offers</a>
+      <a href="/dining">Dining</a>
+
+      <a href={teeTimesUrl} class="button button-primary nav-cta" target="_blank" rel="noopener noreferrer">
+        Book a tee time
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 0 rgba(16, 38, 38, 0.04);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.65rem 0.75rem;
+  }
+
+  .logo-link {
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+  .logo-link img {
+    display: block;
+    width: 112px;
+    height: auto;
+    max-height: 72px;
+    object-fit: contain;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    appearance: none;
+  }
+
+  .nav-scrim {
+    display: none;
+  }
+
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    padding: 0 10px;
+  }
+
+  .nav-burger span {
+    display: block;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 1px;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.15rem 1.1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+
+  .site-nav > a:not(.nav-cta) {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .site-nav > a:not(.nav-cta):hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-trigger {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-trigger,
+  .nav-dropdown:focus-within .nav-dropdown-trigger {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .nav-dropdown-panel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-panel,
+  .nav-dropdown:focus-within .nav-dropdown-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-dropdown-panel a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-decoration: none;
+    color: var(--color-text);
+    border-bottom: none;
+  }
+
+  .nav-dropdown-panel a:hover {
+    background: var(--color-bg);
+    color: var(--color-primary);
+  }
+
+  .nav-cta {
+    margin-left: 0.25rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 980px) {
+    .nav-toggle:checked ~ .nav-scrim {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: rgba(16, 38, 38, 0.4);
+      cursor: pointer;
+    }
+
+    .nav-burger {
+      display: flex;
+      z-index: 102;
+      position: relative;
+    }
+
+    .site-nav {
+      position: fixed;
+      inset: 0;
+      top: 0;
+      z-index: 101;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 5.5rem 1.5rem 2rem;
+      background: rgba(244, 248, 247, 0.98);
+      backdrop-filter: blur(8px);
+      font-size: 0.9rem;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.2s ease;
+    }
+
+    .nav-toggle:checked ~ .site-nav {
+      transform: translateX(0);
+    }
+
+    .site-nav > a:not(.nav-cta) {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-dropdown {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-dropdown-trigger {
+      display: block;
+      padding: 0.85rem 0;
+      border: none;
+    }
+
+    .nav-dropdown-panel {
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      border: none;
+      box-shadow: none;
+      padding: 0 0 0.75rem 0.75rem;
+    }
+
+    .nav-dropdown-panel a {
+      padding: 0.45rem 0;
+    }
+
+    .nav-cta {
+      margin-left: 0;
+      margin-top: 1rem;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+</style>
+
+<style is:global>
+  body:has(#nav-toggle:checked) {
+    overflow: hidden;
+  }
+</style>

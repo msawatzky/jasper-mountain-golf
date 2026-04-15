@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+import { chronoGolfTeeTimesUrl } from "../data/site";
+---
+
+<BaseLayout
+  title="Rates & Tee Times"
+  description="Green fees, twilight, junior rates, rentals, and tee times at Fairmont Jasper Park Lodge Golf Course."
+>
+  <InnerPageHero eyebrow="Book your round" title="Rates & Tee Times" image={heroImages.course} />
+  <div class="page-prose page-prose-wide">
+    <p class="lead">
+      <a
+        href={chronoGolfTeeTimesUrl}
+        class="button button-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="display: inline-flex; margin-bottom: 1rem"
+      >
+        Book a tee time
+      </a>
+    </p>
+    <p>
+      All green fees include a golf cart and practice balls on the day of play. <strong>Cancellation policy:</strong> 48 hours before your round to avoid fees.
+    </p>
+    <p><em>— Thank you, from the Golf Team.</em></p>
+
+    <h2>Daily green fee</h2>
+    <table class="rate-table">
+      <tbody>
+        <tr><td>May 29 – September 30</td><td>From <strong>$280</strong></td></tr>
+        <tr><td>October 1 – closing</td><td>From <strong>$200</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Prices exclude 5% GST and 3% DMF.</p>
+    <p>
+      <a href="tel:+17808526090">780 852 6090</a> ·{" "}
+      <a href="mailto:jpl.golfreservations@fairmont.com">jpl.golfreservations@fairmont.com</a>
+    </p>
+
+    <h2>Alberta resident — twilight (after 3 PM)</h2>
+    <p>May 29 – Sep 30 from <strong>$187</strong> — valid Alberta ID required. +GST/DMF.</p>
+
+    <h2>Alberta resident — daily</h2>
+    <table class="rate-table">
+      <tbody>
+        <tr><td>May 29 – Sep 30</td><td>From <strong>$220</strong></td></tr>
+        <tr><td>Oct 1 – closing</td><td>From <strong>$160</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Valid Alberta ID required. +GST/DMF.</p>
+
+    <h2>Junior rates (under 17)</h2>
+    <p>May 29 – Sep 30 from <strong>$140</strong>*. All season after 3 PM: juniors <strong>free**</strong> with one paid adult.</p>
+    <p><small>* Applies to 17 and under. ** One junior per paid adult.</small></p>
+
+    <h2>Twilight (after 3 PM)</h2>
+    <p>May 29 – Sep 30 from <strong>$224</strong> +GST/DMF.</p>
+
+    <h2>Play 9</h2>
+    <p>Includes golf, power cart, and range warm-up. May 29 – Sep 30: daily from <strong>$182</strong>; Alberta resident from <strong>$169</strong> + taxes.</p>
+
+    <h2>Lessons</h2>
+    <p>Playing lessons, private, semi-private, and group clinics — see <a href="/lessons-jasper-golf">Golf clinics &amp; lessons</a>.</p>
+
+    <h2>Rentals</h2>
+    <p>TaylorMade premium men&apos;s &amp; ladies&apos;; RORY juniors. <strong>18-hole package</strong> $120 (balls + glove). <strong>9-hole clubs</strong> $80. <strong>Junior clubs</strong> $30. <strong>Adidas shoes</strong> $25/pair. +GST/DMF.</p>
+
+    <h2>Groups &amp; golf vacations</h2>
+    <p><a href="/groups-events">Groups &amp; tournaments</a> · <a href="/vacation-packages">Stay &amp; play packages</a></p>
+  </div>
+</BaseLayout>

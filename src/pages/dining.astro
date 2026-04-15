@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="Dining"
+  description="Thompson's Terrace, Birdies at the 7th Tee, and on-course dining at Fairmont Jasper Park Lodge Golf Club."
+>
+  <InnerPageHero eyebrow="On course" title="Dine at the Golf Club" image={heroImages.terrace} />
+  <div class="page-prose">
+    <p class="lead">
+      From sunrise coffee to post-round cocktails, dining is built around your round — patio, to-go, and on-course stops steps from the fairways.
+    </p>
+
+    <h2>Thompson&apos;s Terrace</h2>
+    <p>
+      At the entrance to the Golf Pro Shop: to-go coffee, sandwiches, wraps, beverages, and everything you need before you tee off. Return for cocktails and dinner
+      on the outdoor patio overlooking the course.
+    </p>
+    <p><strong>Open daily</strong> · 12:00 – 5:00 PM (hours subject to season — confirm with the resort).</p>
+    <p>
+      <a href="https://www.jasper-park-lodge.com/dine/thompsons-terrace/" target="_blank" rel="noopener noreferrer">Resort dining details</a>
+    </p>
+
+    <h2>Birdies (7th Tee)</h2>
+    <p>
+      On course at the 7th and 11th holes — hot dogs, chili, snacks, cold and hot drinks, frozen cocktails, sunscreen, balls, hats, and essentials you forgot in
+      the bag room.
+    </p>
+    <p><strong>Open daily</strong> · 9:00 AM – 8:00 PM</p>
+
+    <h2>Thompson&apos;s Terrace To Go</h2>
+    <p>
+      Coffee, sandwiches, wraps, cold beverages (including JPL Lager), and grab-and-go fuel for your day on the course.
+    </p>
+    <p><strong>Open daily</strong> · 7:00 AM – 8:00 PM</p>
+  </div>
+</BaseLayout>

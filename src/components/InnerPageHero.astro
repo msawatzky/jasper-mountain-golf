@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  eyebrow?: string;
+  /** Optional background image URL (Wix CDN or local). */
+  image?: string;
+}
+
+const { title, eyebrow, image } = Astro.props;
+---
+
+<section
+  class="inner-hero"
+  style={`background-image: linear-gradient(120deg, rgba(10, 45, 44, 0.92) 0%, rgba(14, 62, 60, 0.88) 45%, rgba(26, 95, 92, 0.82) 100%), ${image ? `url('${image}')` : "none"}`}
+>
+  <div class="container inner-hero-inner">
+    {eyebrow && <p class="eyebrow inner-eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+  </div>
+</section>
+
+<style>
+  .inner-hero {
+    position: relative;
+    width: 100%;
+    background-color: #0e3e3c;
+    background-size: cover;
+    background-position: center;
+    padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
+    min-height: 0;
+  }
+
+  .inner-hero-inner {
+    position: relative;
+    width: min(1120px, calc(100% - 3rem));
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .inner-eyebrow {
+    margin-bottom: 0.65rem;
+    color: rgba(214, 177, 109, 0.95);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    color: #f7fbfa;
+    max-width: min(42ch, 100%);
+    margin-inline: auto;
+  }
+</style>

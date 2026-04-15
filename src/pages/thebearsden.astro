@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+import { stanleysKitchenUrl } from "../data/site";
+---
+
+<BaseLayout
+  title="The Bear's Den"
+  description="Indoor golf simulator and gaming at the Fairmont Jasper Park Lodge Golf Clubhouse in Jasper, Alberta."
+>
+  <InnerPageHero
+    eyebrow="Golf Clubhouse"
+    title="The Bear's Den"
+    image={heroImages.bearsDen}
+  />
+  <div class="page-prose">
+    <p class="lead">
+      The Bear&apos;s Den offers a refined yet relaxed indoor retreat designed for year-round enjoyment. Whether perfecting your swing on world-class courses or
+      enjoying a family game night, the space blends premium technology with thoughtful comfort.
+    </p>
+
+    <h2>Golf simulator experience</h2>
+    <p>
+      Play iconic courses from around the globe using state-of-the-art technology powered by Foresight Sports. Featuring a GC Hawk ceiling-mounted launch monitor,
+      the simulator delivers an immersive, highly accurate golf experience with access to 200+ internationally award-winning courses including Fairmont Jasper Park
+      Lodge Golf Course and Fairmont Banff Springs Golf Course.
+    </p>
+    <div class="callout">
+      <p><strong>Pricing:</strong> $70 per hour — includes Mizuno rental clubs and golf balls.</p>
+      <p>Ideal for casual play, practice sessions, or friendly competition in a relaxed indoor setting.</p>
+    </div>
+
+    <h2>Nintendo gaming experience</h2>
+    <p>
+      The Bear&apos;s Den also features a Nintendo gaming setup designed for interactive group play and shared moments. Games include Mario Kart World, Mario Party,
+      and Mario Golf: Super Rush.
+    </p>
+    <div class="callout">
+      <p><strong>Pricing:</strong> $50 per hour · $25 per 30 minutes</p>
+      <p>Children must be accompanied by a parent or guardian.</p>
+    </div>
+
+    <h2>Dining options</h2>
+    <p>
+      A curated selection from{" "}
+      <a href={stanleysKitchenUrl} target="_blank" rel="noopener noreferrer">Stanley&apos;s Kitchen &amp; Bar</a> Lounge menu is available during your experience at
+      the Bear&apos;s Den, including both food and beverage options. Full restaurant menu is not available.
+    </p>
+  </div>
+</BaseLayout>

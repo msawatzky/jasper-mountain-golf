@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+import { golfHubBookingUrl } from "../data/site";
+---
+
+<BaseLayout
+  title="Golfer Guidelines"
+  description="Reservations, arrival, carts, practice, and on-course guidelines for Fairmont Jasper Park Lodge Golf Club."
+>
+  <InnerPageHero eyebrow="Plan your visit" title="Golfer Guidelines" image={heroImages.course} />
+  <div class="page-prose">
+    <p class="lead">Everything you need for a smooth round at Fairmont Jasper Park Lodge — from booking to post-round.</p>
+
+    <h2>Reservations</h2>
+    <p>
+      Booking in advance is recommended. Use the{" "}
+      <a href={golfHubBookingUrl} target="_blank" rel="noopener noreferrer">online booking link</a> to reduce call volume where possible.
+    </p>
+
+    <h2>Arrival</h2>
+    <p>
+      Course access is for staff, members, and guests with a booked tee time, range session, or lesson. Arrive and check in at the Golf Shop <strong>at least 25 minutes</strong> before your tee time. Check in before using practice facilities. Bring a water bottle — fill stations are in the shop and every three holes.
+    </p>
+
+    <h2>Check-in &amp; pro shop</h2>
+    <p>Golf Shop hours are published seasonally (typically early morning through evening). Retail entry may be available from multiple Clubhouse entrances.</p>
+
+    <h2>Golf carts</h2>
+    <p>PACE GPS (new for 2026), club &amp; ball washers, coolers, sand/seed, divot tools, ball markers, and tees (via starter).</p>
+
+    <h2>Practice facility</h2>
+    <p>Opens before the first tee time; closes in the evening (times posted seasonally). Practice greens available.</p>
+
+    <h2>On the course</h2>
+    <p>Scorecards from the starter; on-course washrooms at 7th/11th and 15th. Birdies Refreshment at 7th and 11th tees.</p>
+
+    <h2>Post round</h2>
+    <p>Second-round bookings: see the starter on-deck after your first round for next steps; carts may wait in a designated area between rounds.</p>
+
+    <h2>Rental clubs</h2>
+    <p>Available through the Golf Shop.</p>
+
+    <h2>Food &amp; beverage</h2>
+    <p>Thompson&apos;s To-Go at the Golf Shop and Birdies on course. Thompson&apos;s Terrace overlooks the 1st tee and putting green.</p>
+
+    <h2>Weather</h2>
+    <p><strong>Lightning:</strong> If you arrived by car, park carts behind your vehicle and wait in your car. Walk/bike guests shelter in the clubhouse area.</p>
+    <p><strong>Frost delay:</strong> Guests are contacted promptly with updated tee times.</p>
+  </div>
+</BaseLayout>

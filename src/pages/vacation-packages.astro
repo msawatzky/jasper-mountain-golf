@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="Stay & Play Packages"
+  description="Centennial stay and play at Fairmont Jasper Park Lodge — golf and mountain lodging in Jasper National Park."
+>
+  <InnerPageHero eyebrow="Offers" title="Stay & Play Packages" image={heroImages.lodgeView} />
+  <div class="page-prose">
+    <p class="lead">100 years in the making.</p>
+    <p>
+      Situated in the heart of Jasper National Park, Stanley Thompson turned blueprints into lasting memories. Welcoming our centennial era, the beauty and unique
+      experiences here still leave players speechless.
+    </p>
+
+    <h2>Centennial Stay &amp; Play</h2>
+    <p>
+      In 2025 we celebrated 100 years of golf at Fairmont Jasper Park Lodge. The Centennial Stay &amp; Play package marks that milestone with a stay-and-play
+      experience honouring legacy, beauty, and the spirit of the game.
+    </p>
+    <p><strong>May 29 – October 11, 2026</strong> (confirm current dates with reservations)</p>
+    <ul>
+      <li>Accommodations at Fairmont Jasper Park Lodge</li>
+      <li>Daily breakfast for two adults</li>
+      <li>One round of golf per person, per day</li>
+      <li>Complimentary golf cart, club storage, and range balls</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Need more for your golf vacation?</strong></p>
+      <p>
+        <a href="mailto:jpl.golfreservations@fairmont.com">jpl.golfreservations@fairmont.com</a>
+        <br />
+        <a href="tel:+17808526090">1 780 852 6090</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,152 @@
+---
+/** Assets from jaspermountaingolf.com (static.wixstatic.com), same sections as live site. */
+const imgClubhouse =
+  "https://static.wixstatic.com/media/8a929a_1753dedefc5e46e483021729a4f49e3cf000.jpg/v1/fit/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/8a929a_1753dedefc5e46e483021729a4f49e3cf000.jpg";
+const imgBearsDen =
+  "https://static.wixstatic.com/media/8a929a_323616aa35a7436e86b55d64e01007e7~mv2.gif/v1/fit/w_1400,h_933,al_c,q_90/8a929a_323616aa35a7436e86b55d64e01007e7~mv2.gif";
+const imgLessons =
+  "https://static.wixstatic.com/media/8a929a_2fe13beb01d94d5aa6ba9c02efd6cc99~mv2.jpg/v1/fit/w_2172,h_1448,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/8a929a_2fe13beb01d94d5aa6ba9c02efd6cc99~mv2.jpg";
+---
+
+<section class="section-space">
+  <div class="container intro-inner">
+    <p class="eyebrow">Centennial Legacy</p>
+    <h2 class="section-title">A Stanley Thompson Masterpiece, Reframed for a New Era</h2>
+    <p class="lead">
+      Our centennial year has passed, yet its legacy continues to shape every round on the Fairmont Jasper Park Lodge golf course. The natural contours, panoramic mountain views, and timeless strategy create a rare sense of presence that turns each visit into a lasting memory.
+    </p>
+  </div>
+</section>
+
+<section class="film-strip section-space">
+  <div class="container cards">
+    <article class="card">
+      <div class="card-media">
+        <img
+          src={imgClubhouse}
+          alt="Golf Clubhouse — Fairmont Jasper Park Lodge"
+          width="1920"
+          height="1080"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="card-body">
+        <h3>Golf Clubhouse</h3>
+        <p>
+          Picturesque views of the 18th hole set the stage for a memorable afternoon. Coffee, instruction, apparel, and warm hospitality are all here to prepare you for a successful round.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img
+          src={imgBearsDen}
+          alt="The Bear's Den golf simulator at Jasper Park Lodge"
+          width="1400"
+          height="933"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="card-body">
+        <h3>The Bear's Den</h3>
+        <p>
+          Jasper's first golf simulator offers over 30 virtual courses in exceptional realism. Perfect for family game nights, events, and winter practice sessions with curated food and beverage service.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img
+          src={imgLessons}
+          alt="Hole 11 — Pyramid, members teeing off at Jasper Park Lodge"
+          width="2172"
+          height="1448"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="card-body">
+        <h3>Clinics &amp; Lessons</h3>
+        <p>
+          Perfect your game with guidance from trained golf professionals through private lessons and small-group clinics designed for every skill level.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .intro-inner {
+    text-align: center;
+    max-width: 72ch;
+    margin-inline: auto;
+  }
+
+  .intro-inner .lead {
+    margin-inline: auto;
+  }
+
+  .film-strip {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 62, 60, 0.05) 0%,
+      rgba(14, 62, 60, 0.01) 100%
+    );
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+
+  .card {
+    margin: 0;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: clip;
+    box-shadow: var(--shadow-soft);
+    min-height: 100%;
+  }
+
+  .card-media {
+    height: clamp(140px, 22vw, 180px);
+    overflow: hidden;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .card-body {
+    padding: 1.3rem 1.25rem 1.4rem;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--color-text-soft);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 980px) {
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

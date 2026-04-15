@@ -1,0 +1,31 @@
+---
+import "../styles/theme.css";
+import SiteHeader from "../components/SiteHeader.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Canada's #1 resort golf course — Stanley Thompson design at Fairmont Jasper Park Lodge, Jasper National Park." } = Astro.props;
+const fullTitle =
+  title === "Home"
+    ? "Fairmont Jasper Park Lodge Golf Club"
+    : `${title} | Fairmont Jasper Park Lodge Golf Club`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <SiteHeader />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

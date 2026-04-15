@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="History"
+  description="A century of Stanley Thompson golf at Fairmont Jasper Park Lodge — heritage, renewal, and mountain golf in Jasper National Park."
+>
+  <InnerPageHero eyebrow="Centennial legacy" title="Playing Through History" image={heroImages.landscape} />
+  <div class="page-prose">
+    <p class="lead">
+      This Canadian masterpiece defined mountain golf — and continues to. In 2024&apos;s wildfires, the course was a barrier that helped save the lodge. As we celebrate the centennial era, the timeless life of the course is all the more poignant: a renewal and a statement — these mountains never change.
+    </p>
+    <p>
+      When you play Fairmont Jasper Park Golf, you play through history — from Stanley Thompson&apos;s original routing to today&apos;s stewardship, storytelling, and the community that tends this ground.
+    </p>
+
+    <h2>Standing proud</h2>
+    <p>
+      A totem once stood by the starter&apos;s hut, a monument to the historic Totem Pole tournament. The pole is gone but the hut remains — now home to a timeline of the course. Traditions run deep in every opening tee shot.
+    </p>
+
+    <h2>Resilience &amp; design</h2>
+    <p>
+      Holes across the property carry stories: original shelters, irrigation carved from the mountain, the bell at the 13th, &ldquo;Cleopatra,&rdquo; the wishing well, wildlife habitat and regeneration alongside fairways — each a chapter in a living museum under sky and peak.
+    </p>
+
+    <h2>Held by heroes</h2>
+    <p>
+      With gratitude to firefighters and first responders who fought to save this ground — and to every guest who walks the fairways and adds their own round to the story.
+    </p>
+    <p>
+      <em>Raise a glass — here&apos;s to another century of mythic rounds on Canadian mountain golf&apos;s holy ground.</em>
+    </p>
+  </div>
+</BaseLayout>

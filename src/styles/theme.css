@@ -1,0 +1,216 @@
+:root {
+  --color-bg: #f4f8f7;
+  --color-surface: #ffffff;
+  --color-text: #102626;
+  --color-text-soft: #3b5653;
+  --color-primary: #0e3e3c;
+  --color-primary-strong: #0a2d2c;
+  --color-accent: #d6b16d;
+  --color-border: #d7e3e0;
+  --shadow-soft: 0 20px 50px rgba(16, 38, 38, 0.14);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.section-space {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 3.1rem);
+  line-height: 1.14;
+  margin: 0 0 1rem;
+}
+
+.lead {
+  font-size: clamp(1.03rem, 1.2vw, 1.15rem);
+  color: var(--color-text-soft);
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  padding: 0.82rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: #1b1b1b;
+}
+
+.button-secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+/* Inner pages — matches homepage luxury resort tone */
+.page-prose {
+  width: min(720px, calc(100% - 3rem));
+  margin-inline: auto;
+  padding-block: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.page-prose-wide {
+  width: min(880px, calc(100% - 3rem));
+}
+
+.page-prose h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 2.25rem 0 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.page-prose h2:first-child {
+  margin-top: 0;
+}
+
+.page-prose h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 1.75rem 0 0.5rem;
+}
+
+.page-prose p,
+.page-prose li {
+  font-size: 1.02rem;
+  line-height: 1.82;
+  color: var(--color-text-soft);
+}
+
+.page-prose p {
+  margin: 0 0 1rem;
+}
+
+.page-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.page-prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.page-prose a:hover {
+  color: var(--color-primary-strong);
+}
+
+.page-prose .lead {
+  font-size: 1.08rem;
+}
+
+.callout {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.35rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 24px rgba(16, 38, 38, 0.06);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.rate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.rate-table th,
+.rate-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+}
+
+.rate-table th {
+  background: rgba(14, 62, 60, 0.06);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.faq details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.65rem;
+  background: var(--color-surface);
+  padding: 0 1rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0.85rem 0;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details[open] summary {
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 0.75rem;
+}
+
+.faq details .faq-body {
+  padding-bottom: 1rem;
+}
+
+.faq .faq-body p {
+  font-size: 0.98rem;
+}

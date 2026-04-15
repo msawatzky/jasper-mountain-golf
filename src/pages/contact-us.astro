@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="FAQ & Contact"
+  description="Contact Fairmont Jasper Park Lodge Golf Club — hours, centennial FAQ, and guest information."
+>
+  <InnerPageHero eyebrow="We're here to help" title="FAQ & Contact" image={heroImages.home} />
+  <div class="page-prose page-prose-wide">
+    <div class="callout">
+      <p><strong>Fairmont Jasper Park Lodge Golf Club</strong></p>
+      <p>1 Old Lodge Road<br />Jasper, Alberta · Canada T0E 1E0</p>
+      <p>
+        <a href="tel:+17808526090">1 780 852 6090</a>
+        <br />
+        <a href="mailto:jpl.golfreservations@fairmont.com">jpl.golfreservations@fairmont.com</a>
+      </p>
+    </div>
+
+    <h2>FAQs — centennial year</h2>
+    <div class="faq">
+      <details>
+        <summary>When did the golf course reopen?</summary>
+        <div class="faq-body">
+          <p>
+            The club reopened Tuesday, July 1, 2025, launching centennial celebrations including a milestone anniversary July 17, 2025. Pre-season restoration (Jan–Jun 2025)
+            included tree work to restore sightlines, select green resurfacing, and phased F&amp;B. The centennial season delivered 100 days of play for 100 years, with
+            ongoing irrigation and enhancements. Legacy work continues 2025–2027 with bunkers, permanent venues, shelters, and landscaping.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Was the course affected by the 2024 wildfires?</summary>
+        <div class="faq-body">
+          <p>
+            Yes — significantly impacted, but with first responders, Parks Canada, and strategic irrigation, essential features were preserved. The reopening marks a
+            new era of stewardship and excellence for Jasper.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Will all 18 holes be open?</summary>
+        <div class="faq-body">
+          <p>
+            Yes — classic Thompson holes and revitalized features are planned to blend into the iconic layout. Some infrastructure work may continue seasonally with
+            minimal disruption.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Winter hours</summary>
+        <div class="faq-body">
+          <p><strong>Course &amp; driving range:</strong> seasonal closure (e.g. effective mid-Oct — confirm annually).</p>
+          <p><strong>Bear&apos;s Den (simulator):</strong> 10:00 AM – 8:00 PM daily.</p>
+          <p><strong>Golf Pro Shop:</strong> 10:00 AM – 8:00 PM daily.</p>
+        </div>
+      </details>
+    </div>
+
+    <p>
+      Follow <a href="https://www.instagram.com/fairmontJPL" target="_blank" rel="noopener noreferrer">@fairmontJPL</a> for events and updates.
+    </p>
+  </div>
+</BaseLayout>

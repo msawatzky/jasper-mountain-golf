@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="Passholders"
+  description="Season passes, Stanley Thompson pass, and corporate options at Fairmont Jasper Park Lodge Golf Club."
+>
+  <InnerPageHero eyebrow="Membership" title="Passholders" image={heroImages.landscape} />
+  <div class="page-prose page-prose-wide">
+    <p class="lead">Become a passholder at Canada&apos;s #1 golf resort course and golf when you like.</p>
+
+    <h2>2025 season passholders</h2>
+    <table class="rate-table">
+      <thead>
+        <tr>
+          <th>Pass type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Individual (ages 25–69)</td><td>$1,950</td></tr>
+        <tr><td>Seniors (70+)</td><td>$1,575</td></tr>
+        <tr><td>Intermediate (ages 19–24)</td><td>$1,225</td></tr>
+        <tr><td>Junior (ages 12–18)</td><td>$525</td></tr>
+        <tr><td>Youth (ages 7–11)</td><td>$300</td></tr>
+        <tr><td>Stanley Thompson Pass</td><td>$3,300</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Optional fees</h3>
+    <table class="rate-table">
+      <tbody>
+        <tr><td>Golf club storage (Jun 15 – Oct 15)</td><td>$175</td></tr>
+        <tr><td>Cart pass</td><td>$375</td></tr>
+        <tr><td>Golf club rentals</td><td>$350</td></tr>
+        <tr><td>Locker storage (May 1 – Oct 15)</td><td>$125</td></tr>
+      </tbody>
+    </table>
+    <p><em>Season window example: July 1 – October 12, 2025 — confirm current dates with the golf shop.</em></p>
+
+    <h2>Stanley Thompson passholders</h2>
+    <p><strong>$3,300</strong> — Annual golf pass (club fees apply), locker, cart pass, club storage; F&amp;B and spa discounts; 7-day booking window; fitness pass; upgraded carts when available; reserved parking; friends &amp; family rates; one complimentary 4-ball tee time.</p>
+    <p>
+      <a href="mailto:jpl.golfreservations@fairmont.com?subject=Inquiry%3A%20Stanley%20Thompson%20Passholders">Email</a> or call{" "}
+      <a href="tel:+17808526090">780-852-6090</a> to purchase.
+    </p>
+
+    <h2>Platinum corporate passholders</h2>
+    <p>Two primary cardholders, storage, cart pass, discounts, 7-day booking, one 4-ball — with published restrictions. Gold <strong>$4,050</strong> · Platinum <strong>$6,075</strong> (example pricing; confirm with the team).</p>
+    <p><a href="mailto:jpl.golfreservations@fairmont.com">Contact the golf team</a> for details.</p>
+  </div>
+</BaseLayout>

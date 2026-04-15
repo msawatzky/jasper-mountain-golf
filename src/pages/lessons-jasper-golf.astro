@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="Golf Clinics & Lessons"
+  description="PGA of Canada instruction — playing lessons, private and group clinics at Fairmont Jasper Park Lodge Golf Course."
+>
+  <InnerPageHero eyebrow="Instruction" title="Golf Clinics & Lessons" image={heroImages.lessons} />
+  <div class="page-prose">
+    <p class="lead">
+      Sharpen your game on the greens of Fairmont Jasper Park Lodge. Our PGA of Canada professionals help you make the most of your season. All rates are before tax.
+    </p>
+
+    <h2>Playing lesson</h2>
+    <p><strong>$399 per person</strong> — includes green fee.</p>
+    <p>
+      One-on-one, nine holes in the evening during the season. Focus on course strategy, rules, etiquette, and trouble shots.
+    </p>
+
+    <h2>Private instruction</h2>
+    <p>Customized to your needs.</p>
+    <ul>
+      <li><strong>Individual:</strong> 45 min $120 · 90 min $180</li>
+      <li><strong>Semi-private (60 min):</strong> 2 players $150 · 3 players $200 · 4 players $225</li>
+    </ul>
+
+    <h2>Group instruction</h2>
+    <p>Up to 24 players; topics from fundamentals to short game.</p>
+    <p><strong>120 minutes — $60 per person</strong> (minimum 6 participants). Includes instruction, range balls, and club use.</p>
+
+    <h2>15-minute tune-up</h2>
+    <p><strong>$40</strong> — quick swing refresh with a professional before your round.</p>
+
+    <p>
+      <a href="/rates-tee-times">Rates &amp; tee times</a> · <a href="mailto:jpl.golfreservations@fairmont.com">jpl.golfreservations@fairmont.com</a> ·{" "}
+      <a href="tel:+17808526090">780 852 6090</a>
+    </p>
+  </div>
+</BaseLayout>

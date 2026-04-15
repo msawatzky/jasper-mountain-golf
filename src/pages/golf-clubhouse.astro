@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+import { chronoGolfTeeTimesUrl } from "../data/site";
+---
+
+<BaseLayout
+  title="Golf Clubhouse"
+  description="Golf shop, Bear's Den simulator, Thompson's Terrace, driving range, and services at Fairmont Jasper Park Lodge Golf Club."
+>
+  <InnerPageHero eyebrow="Visit us" title="Golf Clubhouse" image={heroImages.clubhouse} />
+  <div class="page-prose">
+    <p class="lead">
+      Picturesque views of the 18th hole set the stage for a great afternoon. Come for coffee, master your swing, style your winning golf attire, and get ready to
+      hit the course — the Clubhouse has everything you need for a successful round.
+    </p>
+
+    <h2>The Bear&apos;s Den</h2>
+    <p>
+      Jasper&apos;s first golf simulator is located at the Golf Clubhouse — over 30 virtual courses in unparalleled realism. New for 2026, we&apos;ve added a
+      Nintendo Switch 2 with popular games. See <a href="/thebearsden">The Bear&apos;s Den</a> for rates and hours.
+    </p>
+
+    <h2>Rates &amp; hours (simulator)</h2>
+    <p>Rates for up to four players: Regular <strong>$70/hr</strong> · Locals&apos; <strong>$60/hr</strong> · Gaming <strong>$50/hr</strong> (includes rentals where noted).</p>
+    <p><strong>Hours:</strong> Daily 10:00 AM – 8:00 PM. Call <a href="tel:+17808526090">780-852-6090</a> or email to book.</p>
+
+    <h2>Dress code</h2>
+    <p>
+      Proper golf attire is required: collared shirts, tailored pants or shorts (no cutoffs), appropriate footwear. Denim, track pants, and sweat pants are not
+      acceptable. Metal-spike free facility. See <a href="/golf-regulations">Golfer Guidelines</a> for safety protocols.
+    </p>
+
+    <h2>Golf shop</h2>
+    <p>
+      Award-winning retail with essentials to souvenirs — men&apos;s and ladies&apos; apparel and accessories. Men&apos;s and ladies&apos; locker rooms are located
+      in the Golf Shop.
+    </p>
+
+    <h2>Food &amp; beverage</h2>
+    <p>
+      Coffee, sandwiches, post-round cocktails, and more. Thompson&apos;s Terrace offers patio dining and items to go; the 7th Tee Hut is to-go only — both tailored
+      to a golfer&apos;s day on the course.
+    </p>
+
+    <h2>Golf carts</h2>
+    <p>
+      Cart or pull cart included in almost all rates. The course is very walkable; many guests enjoy our EZGo fleet with PACE GPS (new for 2026).
+    </p>
+
+    <h2>Junior golfers play free</h2>
+    <p>
+      Fairmont guest privileges include Juniors Play Free: players under 17 play free when accompanied by one full-paying adult (one adult per junior) after 3:00 PM.
+    </p>
+
+    <h2>Parking &amp; driving range</h2>
+    <p>Complimentary self-parking for golfers near the Clubhouse. The range is steps away; warm-up included with green fees. Short game area with putting green, bunkers, and chipping zones.</p>
+
+    <h2>Tee times &amp; cancellations</h2>
+    <p>
+      Book online via <a href={chronoGolfTeeTimesUrl} target="_blank" rel="noopener noreferrer">Chrono Golf</a> or call <a href="tel:+17808526090">780-852-6090</a>.
+      48-hour cancellation policy applies.
+    </p>
+  </div>
+</BaseLayout>

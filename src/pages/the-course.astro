@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+import { fairmontAwardsUrl } from "../data/site";
+---
+
+<BaseLayout
+  title="The Golf Course"
+  description="Stanley Thompson's Fairmont Jasper Park Lodge — Canada's #1 golf resort course in Jasper National Park."
+>
+  <InnerPageHero eyebrow="The course" title="Canada's #1 Golf Resort Course" image={heroImages.course} />
+  <div class="page-prose">
+    <p class="lead">
+      Every hole at Fairmont Jasper Park Lodge provides its own unique views and challenges. Stanley Thompson, Canada&apos;s master golf course architect, displayed
+      some of the finest work of his career with this design: elevated tee boxes, dramatic bunkering, and holes aligned with distant mountain vistas.
+    </p>
+    <p>
+      Highly acclaimed for its challenging layout and spectacular beauty, the club is rated by <em>SCOREGolf</em> as the #1 Golf Resort Course in Canada. Most
+      recently, <em>SCOREGolf</em> ranked Fairmont Jasper Park Lodge Golf Club #2 among Canada&apos;s public courses (2021). Few courses in the world match the
+      rugged majesty of this national treasure, nestled between sparkling lakes, pristine forest, and rocky peaks.
+    </p>
+    <p>
+      Each round takes you on an exquisite journey through a stunning mountain backdrop. Wildlife abounds — from deer, elk, and Canada geese to the occasional
+      curious bear: a true Rocky Mountain mulligan.
+    </p>
+
+    <blockquote class="callout">
+      <p>
+        <strong>&ldquo;Definite &lsquo;Bucket List&rsquo; Course!&rdquo;</strong> — An unexpected opportunity for 9 memorable holes at the #1 rated resort course
+        in Canada. Staff were exceptionally helpful and a brand new set of TaylorMade hire clubs were the icing on the cake.
+      </p>
+      <p style="margin-bottom: 0"><em>TripAdvisor, Peter J313</em></p>
+    </blockquote>
+
+    <h2>Awards &amp; accolades</h2>
+    <p>
+      The Stanley Thompson designed mountain course has earned prestigious recognition across Canada and the world — including <em>SCOREGolf</em>,{" "}
+      <em>Golf Digest</em>, and <em>Canadian Golf Magazine</em>.
+    </p>
+    <ul>
+      <li>Ranked #3 — <em>SCOREGolf</em> Best Golf Courses in Canada, 2022</li>
+      <li>Ranked #2 — <em>SCOREGolf</em> Top 59 Canadian Public Golf Courses, 2021</li>
+      <li>Ranked #58 — <em>Golf Digest</em> World Top 100 Golf Courses, 2020</li>
+      <li>Ranked #1 Most Beautiful Golf Course in Canada — <em>SCOREGolf</em>, 2018</li>
+    </ul>
+    <p>
+      <a href={fairmontAwardsUrl} target="_blank" rel="noopener noreferrer">See the full list of awards and accolades</a> on Fairmont.com.
+    </p>
+
+    <h2>Scorecard &amp; tips</h2>
+    <p>
+      Each hole offers its own challenges; the course is forgiving and challenging at once. The course rating is maintained by Alberta Golf biannually. Yardage
+      Guides are available for purchase in the Golf Shop, with relevant yardages and tips to navigate each hole.
+    </p>
+  </div>
+</BaseLayout>

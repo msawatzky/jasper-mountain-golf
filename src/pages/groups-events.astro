@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import { heroImages } from "../data/wixImages";
+---
+
+<BaseLayout
+  title="Groups & Tournaments"
+  description="Corporate tournaments, fundraisers, and group golf events at Fairmont Jasper Park Lodge in Jasper National Park."
+>
+  <InnerPageHero eyebrow="Events" title="Groups & Tournaments" image={heroImages.lodgeView} />
+  <div class="page-prose">
+    <p class="lead">
+      Whether it&apos;s a pre-wedding outing, team build, or fundraiser, our event and golf professionals help you execute a stunning event in the Canadian Rockies.
+    </p>
+
+    <h2>Basic tournament package</h2>
+    <p>Included for every group: cart set-up, club cleaning, personalized cart plates, proximity markers, overnight club storage, scoring, starting instructions, escort to tee, unlimited range balls on the day of play, bag tag, rules/game sheet.</p>
+
+    <h2>Eagle tournament package</h2>
+    <p><strong>$40 per person</strong> — everything in Basic, plus a gift box: JPL hat, logo balls, divot tool &amp; marker, personalized scorecards, and tournament group rates.</p>
+
+    <h2>Group rates &amp; buyouts</h2>
+    <p><strong>Groups of 16+</strong> — May 29 – Sep 30 from <strong>$240</strong>+ tax per person; Oct 1–4 from <strong>$183</strong>+ tax per person (seasonal — confirm with the team).</p>
+
+    <h2>Packages &amp; prizing</h2>
+    <p>Golf Shop souvenirs and prizes; Fairmont gift cards available. Tournament discount tiers on bulk shop purchases (10% / 15% / 20% over $500 / $1,000 / $1,500 before tax).</p>
+
+    <div class="callout">
+      <p><strong>Reserve your program</strong></p>
+      <p>
+        <a href="mailto:jpl.golfreservations@fairmont.com">jpl.golfreservations@fairmont.com</a>
+        <br />
+        <a href="tel:+17808526090">1 780 852 6090</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>
