@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 import { chronoGolfTeeTimesUrl } from "../data/site";
 ---
 
@@ -9,7 +8,12 @@ import { chronoGolfTeeTimesUrl } from "../data/site";
   title="Golf Clubhouse"
   description="Golf shop, Bear's Den simulator, Thompson's Terrace, driving range, and services at Fairmont Jasper Park Lodge Golf Club."
 >
-  <InnerPageHero eyebrow="Visit us" title="Golf Clubhouse" image={heroImages.clubhouse} />
+  <InnerPageHero
+    page="golf-clubhouse"
+    eyebrow="Visit us"
+    title="Golf Clubhouse"
+    tagline="Pro shop, terrace, range &amp; services — steps from the 18th with peaks on the horizon."
+  />
   <div class="page-prose">
     <p class="lead">
       Picturesque views of the 18th hole set the stage for a great afternoon. Come for coffee, master your swing, style your winning golf attire, and get ready to

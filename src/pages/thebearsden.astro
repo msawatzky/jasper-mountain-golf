@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 import { stanleysKitchenUrl } from "../data/site";
 ---
 
@@ -10,9 +9,10 @@ import { stanleysKitchenUrl } from "../data/site";
   description="Indoor golf simulator and gaming at the Fairmont Jasper Park Lodge Golf Clubhouse in Jasper, Alberta."
 >
   <InnerPageHero
+    page="thebearsden"
     eyebrow="Golf Clubhouse"
     title="The Bear's Den"
-    image={heroImages.bearsDen}
+    tagline="Indoor golf, simulator play &amp; gaming — year-round at the Clubhouse."
   />
   <div class="page-prose">
     <p class="lead">

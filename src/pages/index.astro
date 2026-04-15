@@ -1,15 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LuxuryHero from "../components/LuxuryHero.astro";
+import MountainScenicStrip from "../components/MountainScenicStrip.astro";
+import MountainGallery from "../components/MountainGallery.astro";
 import LegacyStory from "../components/LegacyStory.astro";
 import PrimaryCta from "../components/PrimaryCta.astro";
 ---
 
 <BaseLayout
   title="Home"
-  description="Canada's #1 resort course — Stanley Thompson golf at Fairmont Jasper Park Lodge, Jasper National Park."
+  description="Mountain golf in Jasper National Park — Stanley Thompson's Fairmont Jasper Park Lodge, Canada's #1 resort course."
+  homeImmersive
 >
-  <LuxuryHero />
+  <LuxuryHero fullViewport />
+  <MountainScenicStrip />
+  <MountainGallery />
   <LegacyStory />
   <PrimaryCta />
 </BaseLayout>

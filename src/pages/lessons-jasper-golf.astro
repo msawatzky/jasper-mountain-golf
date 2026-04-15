@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="Golf Clinics & Lessons"
   description="PGA of Canada instruction — playing lessons, private and group clinics at Fairmont Jasper Park Lodge Golf Course."
 >
-  <InnerPageHero eyebrow="Instruction" title="Golf Clinics & Lessons" image={heroImages.lessons} />
+  <InnerPageHero
+    page="lessons-jasper-golf"
+    eyebrow="Instruction"
+    title="Golf Clinics &amp; Lessons"
+    tagline="PGA of Canada professionals — private, group &amp; on-course instruction in the Rockies."
+  />
   <div class="page-prose">
     <p class="lead">
       Sharpen your game on the greens of Fairmont Jasper Park Lodge. Our PGA of Canada professionals help you make the most of your season. All rates are before tax.

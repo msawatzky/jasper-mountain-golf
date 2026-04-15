@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 import { chronoGolfTeeTimesUrl } from "../data/site";
 ---
 
@@ -9,7 +8,12 @@ import { chronoGolfTeeTimesUrl } from "../data/site";
   title="Rates & Tee Times"
   description="Green fees, twilight, junior rates, rentals, and tee times at Fairmont Jasper Park Lodge Golf Course."
 >
-  <InnerPageHero eyebrow="Book your round" title="Rates & Tee Times" image={heroImages.course} />
+  <InnerPageHero
+    page="rates-tee-times"
+    eyebrow="Book your round"
+    title="Rates &amp; Tee Times"
+    tagline="Green fees, twilight, juniors, rentals &amp; how to reserve your round in Jasper National Park."
+  />
   <div class="page-prose page-prose-wide">
     <p class="lead">
       <a

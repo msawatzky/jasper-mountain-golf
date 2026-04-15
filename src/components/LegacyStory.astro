@@ -1,19 +1,19 @@
 ---
-/** Assets from jaspermountaingolf.com (static.wixstatic.com), same sections as live site. */
-const imgClubhouse =
-  "https://static.wixstatic.com/media/8a929a_1753dedefc5e46e483021729a4f49e3cf000.jpg/v1/fit/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/8a929a_1753dedefc5e46e483021729a4f49e3cf000.jpg";
-const imgBearsDen =
-  "https://static.wixstatic.com/media/8a929a_323616aa35a7436e86b55d64e01007e7~mv2.gif/v1/fit/w_1400,h_933,al_c,q_90/8a929a_323616aa35a7436e86b55d64e01007e7~mv2.gif";
-const imgLessons =
-  "https://static.wixstatic.com/media/8a929a_2fe13beb01d94d5aa6ba9c02efd6cc99~mv2.jpg/v1/fit/w_2172,h_1448,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/8a929a_2fe13beb01d94d5aa6ba9c02efd6cc99~mv2.jpg";
+import { heroImages } from "../data/wixImages";
+
+const imgClubhouse = heroImages.clubhouse;
+const imgBearsDen = heroImages.bearsDen;
+const imgLessons = heroImages.lessons;
 ---
 
 <section class="section-space">
   <div class="container intro-inner">
-    <p class="eyebrow">Centennial Legacy</p>
-    <h2 class="section-title">A Stanley Thompson Masterpiece, Reframed for a New Era</h2>
+    <p class="eyebrow">Centennial legacy</p>
+    <h2 class="section-title">Where the Rockies meet every fairway</h2>
     <p class="lead">
-      Our centennial year has passed, yet its legacy continues to shape every round on the Fairmont Jasper Park Lodge golf course. The natural contours, panoramic mountain views, and timeless strategy create a rare sense of presence that turns each visit into a lasting memory.
+      Jasper National Park surrounds every hole — glaciers on the horizon, forests at your shoulder, and Thompson&apos;s bunkers and greens laid into the land as if the
+      mountains themselves sketched the routing. Our centennial story continues here: timeless strategy, panoramic views, and a sense of place you&apos;ll only find
+      this high in the Canadian Rockies.
     </p>
   </div>
 </section>
@@ -25,8 +25,8 @@ const imgLessons =
         <img
           src={imgClubhouse}
           alt="Golf Clubhouse — Fairmont Jasper Park Lodge"
-          width="1920"
-          height="1080"
+          width="2172"
+          height="1188"
           loading="lazy"
           decoding="async"
         />
@@ -44,8 +44,8 @@ const imgLessons =
         <img
           src={imgBearsDen}
           alt="The Bear's Den golf simulator at Jasper Park Lodge"
-          width="1400"
-          height="933"
+          width="3200"
+          height="2000"
           loading="lazy"
           decoding="async"
         />
@@ -62,9 +62,9 @@ const imgLessons =
       <div class="card-media">
         <img
           src={imgLessons}
-          alt="Hole 11 — Pyramid, members teeing off at Jasper Park Lodge"
-          width="2172"
-          height="1448"
+          alt="Golf instruction and play beneath the Rockies at Jasper Park Lodge"
+          width="3024"
+          height="1654"
           loading="lazy"
           decoding="async"
         />
@@ -115,7 +115,7 @@ const imgLessons =
   }
 
   .card-media {
-    height: clamp(140px, 22vw, 180px);
+    height: clamp(200px, 30vw, 280px);
     overflow: hidden;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
@@ -126,6 +126,12 @@ const imgLessons =
     object-fit: cover;
     object-position: center;
     display: block;
+    filter: saturate(1.06) contrast(1.03);
+    transition: filter 0.35s ease;
+  }
+
+  .card:hover .card-media img {
+    filter: saturate(1.1) contrast(1.05);
   }
 
   .card-body {

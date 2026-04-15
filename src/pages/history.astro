@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="History"
   description="A century of Stanley Thompson golf at Fairmont Jasper Park Lodge — heritage, renewal, and mountain golf in Jasper National Park."
 >
-  <InnerPageHero eyebrow="Centennial legacy" title="Playing Through History" image={heroImages.landscape} />
+  <InnerPageHero
+    page="history"
+    eyebrow="Centennial legacy"
+    title="Playing Through History"
+    tagline="From 1925 to today — a Stanley Thompson masterpiece in the Canadian Rockies."
+  />
   <div class="page-prose">
     <p class="lead">
       This Canadian masterpiece defined mountain golf — and continues to. In 2024&apos;s wildfires, the course was a barrier that helped save the lodge. As we celebrate the centennial era, the timeless life of the course is all the more poignant: a renewal and a statement — these mountains never change.

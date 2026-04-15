@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="Dining"
   description="Thompson's Terrace, Birdies at the 7th Tee, and on-course dining at Fairmont Jasper Park Lodge Golf Club."
 >
-  <InnerPageHero eyebrow="On course" title="Dine at the Golf Club" image={heroImages.terrace} />
+  <InnerPageHero
+    page="dining"
+    eyebrow="On course"
+    title="Dine at the Golf Club"
+    tagline={`Thompson's Terrace, Birdies at the 7th Tee & to-go — fuel for your round in the Rockies.`}
+  />
   <div class="page-prose">
     <p class="lead">
       From sunrise coffee to post-round cocktails, dining is built around your round — patio, to-go, and on-course stops steps from the fairways.

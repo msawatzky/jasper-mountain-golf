@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="Groups & Tournaments"
   description="Corporate tournaments, fundraisers, and group golf events at Fairmont Jasper Park Lodge in Jasper National Park."
 >
-  <InnerPageHero eyebrow="Events" title="Groups & Tournaments" image={heroImages.lodgeView} />
+  <InnerPageHero
+    page="groups-events"
+    eyebrow="Events"
+    title="Groups &amp; Tournaments"
+    tagline="Corporate outings, fundraisers &amp; celebrations — mountain golf with a full events team."
+  />
   <div class="page-prose">
     <p class="lead">
       Whether it&apos;s a pre-wedding outing, team build, or fundraiser, our event and golf professionals help you execute a stunning event in the Canadian Rockies.

@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="FAQ & Contact"
   description="Contact Fairmont Jasper Park Lodge Golf Club — hours, centennial FAQ, and guest information."
 >
-  <InnerPageHero eyebrow="We're here to help" title="FAQ & Contact" image={heroImages.home} />
+  <InnerPageHero
+    page="contact-us"
+    eyebrow="We're here to help"
+    title="FAQ &amp; Contact"
+    tagline="Hours, guest information &amp; how to reach the golf team at Fairmont Jasper Park Lodge."
+  />
   <div class="page-prose page-prose-wide">
     <div class="callout">
       <p><strong>Fairmont Jasper Park Lodge Golf Club</strong></p>

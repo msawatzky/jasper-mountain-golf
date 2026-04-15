@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="Stay & Play Packages"
   description="Centennial stay and play at Fairmont Jasper Park Lodge — golf and mountain lodging in Jasper National Park."
 >
-  <InnerPageHero eyebrow="Offers" title="Stay & Play Packages" image={heroImages.lodgeView} />
+  <InnerPageHero
+    page="vacation-packages"
+    eyebrow="Offers"
+    title="Stay &amp; Play Packages"
+    tagline="Lodging, breakfast &amp; golf — centennial stay-and-play at Fairmont Jasper Park Lodge."
+  />
   <div class="page-prose">
     <p class="lead">100 years in the making.</p>
     <p>

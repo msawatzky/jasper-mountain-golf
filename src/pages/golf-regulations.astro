@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 import { golfHubBookingUrl } from "../data/site";
 ---
 
@@ -9,7 +8,12 @@ import { golfHubBookingUrl } from "../data/site";
   title="Golfer Guidelines"
   description="Reservations, arrival, carts, practice, and on-course guidelines for Fairmont Jasper Park Lodge Golf Club."
 >
-  <InnerPageHero eyebrow="Plan your visit" title="Golfer Guidelines" image={heroImages.course} />
+  <InnerPageHero
+    page="golf-regulations"
+    eyebrow="Plan your visit"
+    title="Golfer Guidelines"
+    tagline="Reservations, arrival, carts, practice &amp; on-course etiquette — play prepared in Jasper."
+  />
   <div class="page-prose">
     <p class="lead">Everything you need for a smooth round at Fairmont Jasper Park Lodge — from booking to post-round.</p>
 

@@ -1,0 +1,57 @@
+---
+import { heroImages } from "../data/wixImages";
+
+const bg = heroImages.landscape;
+---
+
+<section
+  class="scenic-strip"
+  aria-label="Mountain golf at Jasper Park Lodge"
+  style={`background-image: linear-gradient(160deg, rgba(8, 28, 27, 0.28) 0%, rgba(8, 28, 27, 0.18) 38%, rgba(10, 40, 38, 0.35) 62%, rgba(6, 22, 21, 0.78) 92%, rgba(5, 18, 17, 0.9) 100%), url('${bg}')`}
+>
+  <div class="container scenic-inner">
+    <p class="eyebrow scenic-eyebrow">Jasper National Park</p>
+    <blockquote class="scenic-quote">
+      Fairways carved through forest and rock — every shot framed by peaks that have watched this course for a century.
+    </blockquote>
+  </div>
+</section>
+
+<style>
+  .scenic-strip {
+    width: 100%;
+    min-height: min(52vh, 560px);
+    background-size: cover;
+    background-position: center 40%;
+    display: grid;
+    align-items: end;
+    padding-block: clamp(2.5rem, 8vw, 4.5rem);
+  }
+
+  .scenic-inner {
+    max-width: min(720px, calc(100% - 2rem));
+    margin-inline: auto;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .scenic-eyebrow {
+    color: rgba(214, 177, 109, 0.98);
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .scenic-quote {
+    margin: 0;
+    font-size: clamp(1.35rem, 3.2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: #f7fbfa;
+    font-style: normal;
+    text-wrap: balance;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 5px 28px rgba(0, 0, 0, 0.42);
+  }
+</style>

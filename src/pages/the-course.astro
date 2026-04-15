@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 import { fairmontAwardsUrl } from "../data/site";
 ---
 
@@ -9,7 +8,12 @@ import { fairmontAwardsUrl } from "../data/site";
   title="The Golf Course"
   description="Stanley Thompson's Fairmont Jasper Park Lodge — Canada's #1 golf resort course in Jasper National Park."
 >
-  <InnerPageHero eyebrow="The course" title="Canada's #1 Golf Resort Course" image={heroImages.course} />
+  <InnerPageHero
+    page="the-course"
+    eyebrow="The course"
+    title="Canada's #1 Golf Resort Course"
+    tagline="Stanley Thompson routing through lakes, forest, and Rocky Mountain sky."
+  />
   <div class="page-prose">
     <p class="lead">
       Every hole at Fairmont Jasper Park Lodge provides its own unique views and challenges. Stanley Thompson, Canada&apos;s master golf course architect, displayed

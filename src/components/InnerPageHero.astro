@@ -1,21 +1,29 @@
 ---
+import { pageHeroBySlug, type InnerPageHeroSlug } from "../data/pageHeroes";
+
 interface Props {
   title: string;
   eyebrow?: string;
-  /** Optional background image URL (Wix CDN or local). */
-  image?: string;
+  tagline?: string;
+  /** Matches jaspermountaingolf.com route — uses that page’s hero photo. */
+  page: InnerPageHeroSlug;
 }
 
-const { title, eyebrow, image } = Astro.props;
+const { title, eyebrow, tagline, page } = Astro.props;
+const image = pageHeroBySlug[page];
 ---
 
 <section
   class="inner-hero"
-  style={`background-image: linear-gradient(120deg, rgba(10, 45, 44, 0.92) 0%, rgba(14, 62, 60, 0.88) 45%, rgba(26, 95, 92, 0.82) 100%), ${image ? `url('${image}')` : "none"}`}
+  aria-label={title}
+  style={`background-image: linear-gradient(180deg, rgba(10, 38, 36, 0.24) 0%, rgba(8, 26, 25, 0.14) 34%, rgba(8, 26, 25, 0.26) 55%, rgba(6, 22, 21, 0.68) 82%, rgba(5, 20, 19, 0.9) 100%), url('${image}')`}
 >
-  <div class="container inner-hero-inner">
-    {eyebrow && <p class="eyebrow inner-eyebrow">{eyebrow}</p>}
-    <h1>{title}</h1>
+  <div class="inner-hero-overlay">
+    <div class="container inner-hero-inner">
+      {eyebrow && <p class="eyebrow inner-eyebrow">{eyebrow}</p>}
+      <h1>{title}</h1>
+      {tagline && <p class="inner-tagline">{tagline}</p>}
+    </div>
   </div>
 </section>
 
@@ -23,11 +31,18 @@ const { title, eyebrow, image } = Astro.props;
   .inner-hero {
     position: relative;
     width: 100%;
-    background-color: #0e3e3c;
+    min-height: min(62vh, 820px);
+    background-color: #0c2f2e;
     background-size: cover;
-    background-position: center;
-    padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
-    min-height: 0;
+    background-position: center 42%;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+  }
+
+  .inner-hero-overlay {
+    width: 100%;
+    padding-block: clamp(4.5rem, 12vw, 7.5rem);
   }
 
   .inner-hero-inner {
@@ -38,18 +53,42 @@ const { title, eyebrow, image } = Astro.props;
   }
 
   .inner-eyebrow {
-    margin-bottom: 0.65rem;
-    color: rgba(214, 177, 109, 0.95);
+    margin-bottom: 0.75rem;
+    color: rgba(214, 177, 109, 0.96);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
   }
 
   h1 {
-    margin: 0;
-    font-size: clamp(1.85rem, 4vw, 3rem);
+    margin: 0 0 0.85rem;
+    font-size: clamp(2rem, 5vw, 3.35rem);
     font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
     color: #f7fbfa;
-    max-width: min(42ch, 100%);
+    max-width: min(22ch, 100%);
     margin-inline: auto;
+    text-wrap: balance;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 5px 32px rgba(0, 0, 0, 0.42);
+  }
+
+  .inner-tagline {
+    margin: 0 auto;
+    max-width: 40ch;
+    font-size: clamp(1.02rem, 2vw, 1.2rem);
+    line-height: 1.65;
+    color: rgba(247, 251, 250, 0.93);
+    font-weight: 400;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.48),
+      0 4px 22px rgba(0, 0, 0, 0.38);
+  }
+
+  @media (max-width: 640px) {
+    .inner-hero {
+      min-height: min(52vh, 560px);
+      background-position: center center;
+    }
   }
 </style>

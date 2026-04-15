@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InnerPageHero from "../components/InnerPageHero.astro";
-import { heroImages } from "../data/wixImages";
 ---
 
 <BaseLayout
   title="Passholders"
   description="Season passes, Stanley Thompson pass, and corporate options at Fairmont Jasper Park Lodge Golf Club."
 >
-  <InnerPageHero eyebrow="Membership" title="Passholders" image={heroImages.landscape} />
+  <InnerPageHero
+    page="memberships"
+    eyebrow="Membership"
+    title="Passholders"
+    tagline="Season passes &amp; Stanley Thompson membership — golf on your schedule in Jasper National Park."
+  />
   <div class="page-prose page-prose-wide">
     <p class="lead">Become a passholder at Canada&apos;s #1 golf resort course and golf when you like.</p>
 

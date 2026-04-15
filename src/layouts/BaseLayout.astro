@@ -5,9 +5,15 @@ import SiteHeader from "../components/SiteHeader.astro";
 interface Props {
   title: string;
   description?: string;
+  /** Homepage: full-bleed hero under a transparent header; header gains a bar after scroll. */
+  homeImmersive?: boolean;
 }
 
-const { title, description = "Canada's #1 resort golf course — Stanley Thompson design at Fairmont Jasper Park Lodge, Jasper National Park." } = Astro.props;
+const {
+  title,
+  description = "Canada's #1 resort golf course — Stanley Thompson design at Fairmont Jasper Park Lodge, Jasper National Park.",
+  homeImmersive = false,
+} = Astro.props;
 const fullTitle =
   title === "Home"
     ? "Fairmont Jasper Park Lodge Golf Club"
@@ -22,10 +28,22 @@ const fullTitle =
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
   </head>
-  <body>
+  <body class:list={[homeImmersive && "home-immersive"]}>
     <SiteHeader />
     <main>
       <slot />
     </main>
+    {homeImmersive && (
+      <script is:inline>
+        (function () {
+          var threshold = 40;
+          function sync() {
+            document.body.classList.toggle("header-solid", window.scrollY > threshold);
+          }
+          sync();
+          window.addEventListener("scroll", sync, { passive: true });
+        })();
+      </script>
+    )}
   </body>
 </html>

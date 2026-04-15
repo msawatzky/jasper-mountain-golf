@@ -1,22 +1,31 @@
 ---
 import { chronoGolfTeeTimesUrl } from "../data/site";
-import { heroImages } from "../data/wixImages";
+import { pageHeroBySlug } from "../data/pageHeroes";
 
-const heroImage = heroImages.home;
+interface Props {
+  /** Full viewport hero (homepage under transparent header). */
+  fullViewport?: boolean;
+}
+
+const { fullViewport = false } = Astro.props;
+
+/** Homepage hero — fairway, water, and Rockies (Wix CDN). */
+const heroImage = pageHeroBySlug.home;
 const bookNowUrl = chronoGolfTeeTimesUrl;
 const stayPlayUrl = "/vacation-packages";
 ---
 
 <section
-  class="hero"
-  style={`background-image: linear-gradient(to right, rgba(8, 30, 29, 0.8), rgba(9, 37, 36, 0.55)), url('${heroImage}')`}
+  class:list={["hero", fullViewport && "hero--full-viewport"]}
+  style={`background-image: linear-gradient(180deg, rgba(10, 38, 36, 0.22) 0%, rgba(8, 26, 25, 0.12) 30%, rgba(8, 26, 25, 0.22) 52%, rgba(6, 22, 21, 0.62) 78%, rgba(5, 20, 19, 0.88) 100%), url('${heroImage}')`}
 >
   <div class="hero-overlay">
     <div class="container hero-content">
       <p class="eyebrow">Fairmont Jasper Park Lodge Golf Club</p>
       <h1>Canada's #1 Resort Course</h1>
       <p class="hero-copy">
-        Exactly where you're meant to play for more than a century. Since 1925, golfers have played this historic Stanley Thompson design surrounded by the Canadian Rockies.
+        Mountain golf at its finest — Stanley Thompson fairways beneath the Rockies. Since 1925, this course has offered what few places can: wild peaks, still water,
+        and a round you&apos;ll replay in your mind long after the last putt drops.
       </p>
       <div class="hero-actions">
         <a
@@ -43,6 +52,21 @@ const stayPlayUrl = "/vacation-packages";
     align-items: center;
   }
 
+  .hero.hero--full-viewport {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100svh;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .hero.hero--full-viewport .hero-overlay {
+    padding-top: max(clamp(5rem, 10vw, 8rem), 5.25rem);
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+  }
+
   .hero-overlay {
     width: 100%;
     padding-block: clamp(5rem, 10vw, 8rem);
@@ -57,6 +81,7 @@ const stayPlayUrl = "/vacation-packages";
 
   .hero-content .eyebrow {
     color: rgba(214, 177, 109, 0.95);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
   }
 
   h1 {
@@ -64,6 +89,9 @@ const stayPlayUrl = "/vacation-packages";
     font-size: clamp(2.3rem, 6vw, 4.8rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 6px 36px rgba(0, 0, 0, 0.45);
   }
 
   .hero-copy {
@@ -71,7 +99,10 @@ const stayPlayUrl = "/vacation-packages";
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.85;
     max-width: 62ch;
-    color: rgba(247, 251, 250, 0.9);
+    color: rgba(247, 251, 250, 0.94);
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.5),
+      0 4px 24px rgba(0, 0, 0, 0.4);
   }
 
   .hero-actions {
@@ -79,5 +110,10 @@ const stayPlayUrl = "/vacation-packages";
     flex-wrap: wrap;
     gap: 0.75rem;
     justify-content: center;
+  }
+
+  .hero-actions .button-secondary {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
   }
 </style>
